@@ -1,0 +1,102 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #34495e;
+  color: #fff;
+  padding: 20px;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+nav ul li {
+  margin-right : 20px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+section {
+  padding: 50px;
+}
+section#about-me {
+  background-color: #f1c40f;
+  text-align: center;
+}
+section#about-me img {
+  width: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+section#experience, section#education, section#skills, section#portfolio {
+  background-color: #ecf0f1;
+}
+section h1 {
+  margin-top: 0;
+  text-align: center;
+}
+section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+section#experience li, section#education li, section#portfolio li {
+  margin-bottom: 50px;
+}
+section#experience h2, section#education h2, section#portfolio h2 {
+  margin-bottom: 10px;
+}
+section#portfolio img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+section#portfolio a {
+  text-decoration: none;
+  color: #2980b9;
+}
+section#contact-me {
+  background-color: #e74c3c;
+  text-align: center;
+}
+section#contact-me form {
+  display: inline-block;
+  text-align: left;
+}
+section#contact-me form label {
+  display: block;
+  margin-bottom: 10px;
+}
+section#contact-me form input[type="text"],
+section#contact-me form input[type="email"],
+section#contact-me form textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+section#contact-me form input[type="submit"] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
