@@ -1,166 +1,163 @@
-body {
-  font-family: 'Open Sans', sans-serif;
+* {
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(to right, #F5B183, #48C6EF);
+  box-sizing: border-box;
 }
-header {
-  background-color: #34495e;
+
+/* Body and global styles */
+body {
+  background-color: #333;
   color: #fff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+header {
+  background-color: #222;
   padding: 20px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  position: sticky;
-  top: 0;
-  z-index: 1;
+  justify-content: center;
 }
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+
+header nav {
+  width: 80%;
   display: flex;
   justify-content: space-between;
 }
-nav ul li {
-  margin-right: 20px;
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
 }
-nav ul li a {
+
+header nav ul li a {
   color: #fff;
   text-decoration: none;
-  transition: all 0.2s ease-in-out;
-}
-nav ul li a:hover {
-  color: #F5B183;
-  background-color: #2980b9;
-  padding: 14px 10px;
-  border-radius: 5px;
-}
-section {
-  padding: 50px;
+  padding: 10px;
+  font-size: 1.2rem;
   text-align: center;
 }
+
+header nav ul li a:hover {
+  background-color: #6d4c41;
+  -webkit-box-shadow: 0px 0px 10px #6d4c41;
+  -moz-box-shadow: 0px 0px 10px #6d4c41;
+  box-shadow: 0px 0px 10px #6d4c41;
+}
+
+/* Section styles */
+section {
+  padding: 20px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* About Me section styles */
 section#about-me {
-  background-color: rgba(30, 77, 208, 0.8);
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
+
 section#about-me img {
-  width: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
-  margin-bottom: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  margin-right: 20px;
 }
-section#about-me p {
-  width: 60%;
+
+section#about-me div {
   text-align: left;
-  margin: 20px;
-  color: #fff;
-  font-size: 1.2rem;
-  line-height: 1.5;
 }
 
 section#about-me h1 {
-  margin-left:20px;
-  padding-left:20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+/* Experience, Education and Skills section styles */
+section#experience, section#education, section#skills {
+  margin-bottom: 20px;
+  text-align: left;
 }
 
-section#experience, section#education, section#skills, section#portfolio {
-  background-color: rgba(236, 240, 241, 0.8);
-}
-section h1 {
-  margin-top: 0;
-  color: #F5B183;
+section#experience h2, section#education h2 {
+  margin-bottom: 5px;
   text-align: center;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
-section ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+
+/* Portfolio section styles */
+section#portfolio {
   display: flex;
   flex-wrap: wrap;
-  border-radius: 50%;
   justify-content: center;
-  align-items: center;
 }
-section#experience li, section#education li, section#portfolio li {
-  width: 80%;
-  margin: 20px;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  transition: all 0.2s ease-in-out;
-}
-section#experience li:hover, section#education li:hover, section#portfolio li:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
-}
-section#experience h2, section#education h2, section#portfolio h2 {
-  color: #F5B183;
-  margin-bottom: 10px;
-}
+
 section#portfolio img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 20px;
+  width: 300px;
+  height: 200px;
+  margin: 20px;
 }
+
 section#portfolio a {
   text-decoration: none;
-  color: #2980b9;
-  transition: all 0.2s ease-in-out;
-}
-section#portfolio a:hover {
-  color: #F5B183;
-}
-section#contact-me {
-  background-color: rgba(231, 76, 60, 0.8);
+  color: #fff;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  display: block;
   text-align: center;
 }
-section#contact-me form {
-  display: inline-block;
+
+/* Contact Me section styles */
+section#contact-me {
   text-align: left;
-  width: 60%;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
 }
+
 section#contact-me form label {
   display: block;
   margin-bottom: 10px;
-  color: #F5B183;
 }
+
 section#contact-me form input[type="text"],
 section#contact-me form input[type="email"],
 section#contact-me form textarea {
   width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-}
-section#contact-me form input[type="submit"] {
-  width: 100%;
-  background-color: #F5B183;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
+  padding: 12px;
+  margin-bottom: 20px;
   border: none;
-  border-radius: 4px;
+  background-color: #444;
+  color: #fff;
+  font-size: 1rem;
+}
+
+section#contact-me form input[type="submit"] {
+  background-color: #6d4c41;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin-top: 20px;
 }
 section#contact-me form input[type="submit"]:hover {
-  background-color: #2980b9;
+  background-color: #fff;
+  color: #6d4c41;
+  -webkit-box-shadow: 0px 0px 10
+  px #6d4c41;
+  -moz-box-shadow: 0px 0px 10px #6d4c41;
+  box-shadow: 0px 0px 10px #6d4c41;
 }
+
+/* Footer styles */
 footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
+  background-color: #222;
   padding: 20px;
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
 }
