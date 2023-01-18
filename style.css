@@ -1,9 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 /* Body and global styles */
 body {
   background-color: #333;
@@ -20,10 +14,11 @@ header {
   padding: 20px;
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 header nav {
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -31,7 +26,9 @@ header nav {
 header nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
 }
 
 header nav ul li a {
@@ -54,7 +51,28 @@ section {
   padding: 20px;
   width: 80%;
   margin: 0 auto;
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
 }
+
+section:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  opacity: 0.5;
+  z-index: -1;
+  -webkit-box-shadow: 0px 0px 10px #6d4c41;
+  -moz-box-shadow: 0px 0px 10px #6d4c41;
+  box-shadow: 0px 0px 10px #6d4c41;
+  transition: all 0.3s ease-in-out;
+}
+
 
 /* About Me section styles */
 section#about-me {
@@ -72,12 +90,15 @@ section#about-me img {
 
 section#about-me div {
   text-align: left;
+  width: 70%;
 }
 
 section#about-me h1 {
   margin-bottom: 10px;
   text-align: center;
+  font-size: 2rem;
 }
+
 /* Experience, Education and Skills section styles */
 section#experience, section#education, section#skills {
   margin-bottom: 20px;
@@ -87,8 +108,13 @@ section#experience, section#education, section#skills {
 section#experience h2, section#education h2 {
   margin-bottom: 5px;
   text-align: center;
+  font-size: 1.5rem;
 }
 
+section#experience ul, section#education ul {
+  list-style: none;
+  text-align: left;
+}
 /* Portfolio section styles */
 section#portfolio {
   display: flex;
@@ -100,6 +126,14 @@ section#portfolio img {
   width: 300px;
   height: 200px;
   margin: 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+section#portfolio img:hover {
+  -webkit-box-shadow: 0px 0px 10px #6d4c41;
+  -moz-box-shadow: 0px 0px 10px #6d4c41;
+  box-shadow: 0px 0px 10px #6d4c41;
 }
 
 section#portfolio a {
@@ -113,26 +147,77 @@ section#portfolio a {
 
 /* Contact Me section styles */
 section#contact-me {
-  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom:20px;
+}
+
+section#contact-me h2{
+  margin-bottom:10px;
+  font-size:1.5rem;
+  text-align:center;
+}
+
+section#contact-me form {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 section#contact-me form label {
-  display: block;
-  margin-bottom: 10px;
+  width: 100%;
+  text-align: left;
+  font-size: 1.2rem;
+  margin-bottom:10px;
 }
 
 section#contact-me form input[type="text"],
 section#contact-me form input[type="email"],
 section#contact-me form textarea {
-  width: 100%;
+  width: 80%;
   padding: 12px;
   margin-bottom: 20px;
   border: none;
   background-color: #444;
   color: #fff;
   font-size: 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
 }
 
+section#contact-me form input[type="text"]:hover,
+section#contact-me form input[type="email"]:hover,
+section#contact-me form textarea:hover {
+    -webkit-box-shadow: 0px 0px 10px #6d4c41;
+    -moz-box-shadow: 0px 0px 10px #6d4c41;
+    box-shadow: 0px 0px 10px #6d4c41;
+}
+
+section#contact-me form input[type="text"],
+section#contact-me form input[type="email"],
+section#contact-me form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #444;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+section#contact-me form input[type="submit"]:hover {
+    background-color: #fff;
+    color: #6d4c41;
+    -webkit-box-shadow: 0px 0px 10px #6d4c41;
+    -moz-box-shadow: 0px 0px 10px #6d4c41;
+    box-shadow: 0px 0px 10px #6d4c41;
+}
 section#contact-me form input[type="submit"] {
   background-color: #6d4c41;
   color: #fff;
@@ -143,21 +228,20 @@ section#contact-me form input[type="submit"] {
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   margin-top: 20px;
-}
-section#contact-me form input[type="submit"]:hover {
-  background-color: #fff;
-  color: #6d4c41;
-  -webkit-box-shadow: 0px 0px 10
-  px #6d4c41;
-  -moz-box-shadow: 0px 0px 10px #6d4c41;
-  box-shadow: 0px 0px 10px #6d4c41;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
 }
 
 /* Footer styles */
 footer {
-  background-color: #222;
-  padding: 20px;
-  text-align: center;
-  color: #fff;
-  font-size: 1.2rem;
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
 }
+
+
+
+
